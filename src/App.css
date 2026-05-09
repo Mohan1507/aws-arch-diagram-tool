@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f0f4f8; color: #1a1a2e; }
+.app-container { min-height: 100vh; display: flex; flex-direction: column; }
+.app-header { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-icon { font-size: 28px; }
+.header-left h1 { font-size: 18px; font-weight: 600; color: #1a1a2e; }
+.header-left p { font-size: 13px; color: #64748b; margin-top: 2px; }
+.header-steps { display: flex; align-items: center; gap: 8px; }
+.step { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #94a3b8; font-weight: 500; }
+.step span { width: 24px; height: 24px; border-radius: 50%; background: #e2e8f0; color: #94a3b8; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; }
+.step.active { color: #3b82f6; }
+.step.active span { background: #3b82f6; color: white; }
+.step.done { color: #10b981; }
+.step.done span { background: #10b981; color: white; }
+.step-divider { width: 32px; height: 1px; background: #e2e8f0; }
+.app-main { flex: 1; padding: 32px; max-width: 1200px; margin: 0 auto; width: 100%; }
+.diagram-layout { display: flex; flex-direction: column; gap: 16px; height: calc(100vh - 140px); }
+.card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px; }
+.btn-primary { background: #3b82f6; color: white; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; }
+.btn-primary:hover { background: #2563eb; }
+.btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+.btn-secondary { background: white; color: #374151; border: 1px solid #e2e8f0; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; }
+.btn-secondary:hover { background: #f8fafc; }
+textarea { width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; font-size: 14px; font-family: inherit; resize: vertical; outline: none; color: #1a1a2e; background: #fafafa; }
+textarea:focus { border-color: #3b82f6; background: white; }
+input[type="text"] { width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; font-size: 14px; font-family: inherit; outline: none; color: #1a1a2e; }
+input[type="text"]:focus { border-color: #3b82f6; }
+.spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; margin-right: 8px; vertical-align: middle; }
+@keyframes spin { to { transform: rotate(360deg); } }
