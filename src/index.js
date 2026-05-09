@@ -1,13 +1,11 @@
 import React from 'react';
-import './App.css';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>AWS Architecture Diagram Tool</h1>
-      <p>Coming soon...</p>
-    </div>
-  );
-}
-
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
